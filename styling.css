@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
+ body{
+    font-family:'Noto Sans',sans-serif;
+    background-color:#20262E;
+    color:#fff;
+ }
+ form
+ {
+    display:block;
+    width:500px;
+    margin:auto;
+    text-align:center;
+ }
+ input[type="text"]
+ {
+    background:white;
+    color:black;
+    border:0;
+    
+ }
+ 
