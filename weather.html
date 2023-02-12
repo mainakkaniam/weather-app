@@ -6,12 +6,32 @@
         <link rel="stylesheet" href="styling.css">
     </head>
     <body>
-        <form>
+        <form style="  display:none;">
             <input type="text" placeholder="Enter your cityname....">
             <ul>
                 
             </ul>
         </form>
+        <div id="weather">
+          <img src="" alt="" id="icon">
+          <h1 id="degrees">20&#8451</h1>
+          <h2 id="city">Stockholm</h2>
+          <button id="change">Change City</button>
+          <div class="info">
+            <div>
+                <h3>Wind</h3>
+                <div class="value">2<span>km/h</span></div>
+            </div>
+            <div>
+                <h3>Feels Like</h3>
+                <div class="value">2<span>km/h</span></div>
+            </div>
+            <div>
+                <h3>Humidity</h3>
+                <div class="value">2<span>km/h</span></div>
+            </div>
+          </div>
+        </div>
         <script src=" https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js "></script>
         <script src="weather.js"></script>
         
