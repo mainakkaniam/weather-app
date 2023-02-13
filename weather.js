@@ -47,6 +47,9 @@ document.body.addEventListener('click',ev=>
 {
     const li=ev.target;
     const {lat,lon,name}=li.dataset;
+    localStorage.setItem('lat',lat);
+    localStorage.setItem('lon',lon);
+    localStorage.setItem('name',name);
     if(!lat)
     {
         return;
@@ -58,4 +61,15 @@ document.getElementById('change').addEventListener('click',()=>
 {
     document.getElementById('weather').style.display='none';
     document.querySelector('form').style.display='block';
-}) 
+}) ;
+
+document.body.onload=()=>
+{
+    if(localStorage.getItem('lat'))
+    {
+        const lat=localStorage.getItem('lat');
+        const lon=localStorage.getItem('lon');
+        const name=localStorage.getItem('name');
+        showWeather(lat,lon,name);
+    }
+}
