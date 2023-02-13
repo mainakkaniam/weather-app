@@ -75,4 +75,6 @@ div.info .value
 div.info .value span{
    color:#888;
    font-size:.8rem;
+   display:inline-block;
+   margin-left:3px;
 }
