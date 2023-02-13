@@ -1,4 +1,5 @@
-keys = '0c4d22a8ee16c1989a17fdf45452ddc9';
+keys1 = '0c4d22a8ee16c1989a17fdf45452ddc9';
+keys='45c121aef188d2d6b2042dce4ce1381a';
 async function search()
 {
     const phrase=document.querySelector('input[type="text"]').value;
@@ -22,7 +23,7 @@ const debouncedSearch= _.debounce(()=>{
 },600);
 async function showWeather(lat,lon,name)
 {
-    const response=await fetch('https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${keys}&units=metric');
+    const response=await fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${keys1}`);
     const data=await response.json();
     console.log(data);
     const temp=data.main.temp;
@@ -31,8 +32,8 @@ async function showWeather(lat,lon,name)
     const wind=data.wind.speed;
     const icon=data.weather[0].icon;
     document.getElementById('city').innerHTML=name;
-    document.getElementById('degrees').innerHTML=temp+'&#8451';
-    document.getElementById('feelsLikeValue').innerHTML=feeslLike+'&#8451';
+    document.getElementById('degrees').innerHTML=(temp - 273.15).toFixed(1)+'&#8451';
+    document.getElementById('feelsLikeValue').innerHTML=(temp - 273.15).toFixed(1)+'&#8451';
     document.getElementById('windValue').innerHTML=wind+'km/h';
     document.getElementById('humidityValue').innerHTML=humidity+'%';
     document.getElementById('icon').src='http://openweathermap.org/img/wn/${icon}@4x.png';
