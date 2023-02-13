@@ -34,9 +34,9 @@ async function showWeather(lat,lon,name)
     document.getElementById('city').innerHTML=name;
     document.getElementById('degrees').innerHTML=(temp - 273.15).toFixed(1)+'&#8451';
     document.getElementById('feelsLikeValue').innerHTML=(temp - 273.15).toFixed(1)+'&#8451';
-    document.getElementById('windValue').innerHTML=wind+'km/h';
-    document.getElementById('humidityValue').innerHTML=humidity+'%';
-    document.getElementById('icon').src='http://openweathermap.org/img/wn/${icon}@4x.png';
+    document.getElementById('windValue').innerHTML=wind+'<span>km/h</span>';
+    document.getElementById('humidityValue').innerHTML=humidity+'<span>%</span>';
+    document.getElementById('icon').src=`http://openweathermap.org/img/wn/${icon}@4x.png`;
     document.querySelector('form').style.display='none';
     document.getElementById('weather').style.display='block';
 
@@ -52,4 +52,10 @@ document.body.addEventListener('click',ev=>
         return;
     }
     showWeather(lat,lon,name);
-})
+});
+
+document.getElementById('change').addEventListener('click',()=>
+{
+    document.getElementById('weather').style.display='none';
+    document.querySelector('form').style.display='block';
+}) 
