@@ -45,23 +45,30 @@ ul li{
 #city
 {
    color:#ff521f;
+   font-size:2rem;
+   position:relative;
+   top:10px;
 }
 button#change
 {
    border:2px solid #888;
    background-color:transparent;
    color:#fff;
-   padding:4px 10px;
+   padding:6px 12px;
    border-radius:20px;
    margin-bottom:20px;
    cursor:pointer;
    text-transform:uppercase;
-   font-size:.7rem;
+   font-size:1rem;
+   position:relative;
+   top:18px;
 }
 div.info
 {
    display:grid;
    grid-template-columns:1fr 1fr 1fr;
+   position:relative;
+   top:20px;
 }
 div.info h3{
    font-size:.8rem;
@@ -74,7 +81,11 @@ div.info .value
 }
 div.info .value span{
    color:#888;
-   font-size:.8rem;
+   font-size:1.2rem;
    display:inline-block;
    margin-left:3px;
+}
+#degrees
+{
+   font-size:3rem;
 }
